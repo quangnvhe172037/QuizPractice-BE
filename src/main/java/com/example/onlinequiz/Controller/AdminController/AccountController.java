@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(value = "*", allowedHeaders = "*")
+@CrossOrigin(value = "*", allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
 @RestController
 @RequestMapping("/admin")
 @AllArgsConstructor

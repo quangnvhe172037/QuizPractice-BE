@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(value = "*", allowedHeaders = "*")
+@CrossOrigin(value = "*", allowedHeaders = "*",origins = "https://quang-nv1911.onrender.com")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/expert/subject")

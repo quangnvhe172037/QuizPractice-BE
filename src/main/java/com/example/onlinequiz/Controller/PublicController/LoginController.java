@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:8081", allowedHeaders = "*")
+@CrossOrigin(origins = "https://quang-nv1911.onrender.com", allowedHeaders = "*")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/authenticate")
