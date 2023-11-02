@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(value = "*",origins = "https://quang-nv1911.onrender.com")
+@CrossOrigin( allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
 @RequestMapping("/practice")
 public class PracticeListController {
     @Autowired

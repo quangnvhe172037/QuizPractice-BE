@@ -21,7 +21,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(value = "*",allowedHeaders = "*",origins = "https://quang-nv1911.onrender.com")
+@CrossOrigin( allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
 @RequestMapping("/subjects")
 @MultipartConfig
 public class SubjectController {

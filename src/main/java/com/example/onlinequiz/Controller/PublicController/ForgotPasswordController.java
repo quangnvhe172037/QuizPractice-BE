@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
 
-@CrossOrigin(value = "*", allowedHeaders = "*",origins = "https://quang-nv1911.onrender.com")
+@CrossOrigin( allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
 @RestController
 @RequestMapping("/forgot-password")
 public class ForgotPasswordController {

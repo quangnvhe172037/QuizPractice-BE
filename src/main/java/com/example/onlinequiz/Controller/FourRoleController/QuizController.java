@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(value = "*", allowedHeaders = "*",origins = "https://quang-nv1911.onrender.com")
+@CrossOrigin( allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/quiz")

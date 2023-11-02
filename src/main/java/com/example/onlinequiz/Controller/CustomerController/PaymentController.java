@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@CrossOrigin(value = "*", allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
+@CrossOrigin( allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
 @RestController
 @RequestMapping("/api/payment")
 public class PaymentController {
