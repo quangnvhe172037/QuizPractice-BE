@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin( allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
+@CrossOrigin( allowedHeaders = "*", origins = "https://quangnv1911-fe.onrender.com")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/quizdata")

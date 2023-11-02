@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin( allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
+@CrossOrigin( allowedHeaders = "*", origins = "https://quangnv1911-fe.onrender.com")
 @RestController
 @RequestMapping("/profile")
 public class ProfileController {

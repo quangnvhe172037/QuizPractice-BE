@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin( allowedHeaders = "*", origins = "https://quang-nv1911.onrender.com")
+@CrossOrigin( allowedHeaders = "*", origins = "https://quangnv1911-fe.onrender.com")
 @RestController
 @RequestMapping("/marketing/post")
 @AllArgsConstructor
