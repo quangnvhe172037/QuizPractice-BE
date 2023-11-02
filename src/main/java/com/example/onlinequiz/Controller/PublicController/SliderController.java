@@ -19,7 +19,7 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin( allowedHeaders = "*", origins = "https://quangnv1911-fe.onrender.com")
+@CrossOrigin( origins = "https://quangnv1911-fe.onrender.com")
 @RequestMapping("/sliders")
 @MultipartConfig
 public class SliderController {

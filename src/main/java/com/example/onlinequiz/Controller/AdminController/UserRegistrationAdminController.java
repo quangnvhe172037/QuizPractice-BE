@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin( allowedHeaders = "*", origins = "https://quangnv1911-fe.onrender.com")
+@CrossOrigin( origins = "https://quangnv1911-fe.onrender.com")
 @RestController
 @RequestMapping("/admin")
 @AllArgsConstructor
