@@ -3,6 +3,7 @@ package com.example.onlinequiz.Controller.FourRoleController;
 import com.example.onlinequiz.Model.*;
 import com.example.onlinequiz.Payload.Request.AddNewLessonQuizRequest;
 import com.example.onlinequiz.Payload.Request.AddNewQuizzes;
+import com.example.onlinequiz.Repo.QuizDataRepository;
 import com.example.onlinequiz.Services.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -27,12 +29,19 @@ public class PracticeListController {
     public final QuizService quizService;
 
     @Autowired
+    public final QuizDataService quizDataService;
+
+    @Autowired
+    public final QuizDetailService quizDetailService;
+
+    @Autowired
     public final SubjectService subjectService;
 
     @Autowired
     public final UserService userService;
 
-
+    @Autowired
+    public final QuizDataRepository quizDataRepository;
     @GetMapping("/list")
     @ResponseBody
     public ResponseEntity<List<QuizResults>> getQuizResultByUseridAndSubjectid(
@@ -92,7 +101,17 @@ public class PracticeListController {
             System.out.println("Duration Time: " + durationTime);
             System.out.println("Pass Rate: " + passRate);
             System.out.println("Exam level: " + examLevel);
-
+            int quantityQuizData;
+            switch (examLevel){
+                case "easy":
+                    quantityQuizData = 4;
+                    break;
+                case "medium":
+                    quantityQuizData = 5;
+                    break;
+                default:
+                    quantityQuizData = 6;
+            }
 
             Quizzes quiz = new Quizzes();
             quiz.setQuizName(quizName);
@@ -109,9 +128,21 @@ public class PracticeListController {
             quiz.setDateCreate(currentTime);
             quiz.setPassRate(passRate);
 
-            //random number question in quiz
+//              More than one row with the given identifier was found: 1
+//            List<QuizData> allQuizData = quizDataRepository.findAllBySubject(s);
+//            System.out.println("Quiz data taken:" + allQuizData);
+
 
             quizService.addNewQuiz(quiz);
+            System.out.println("Quiz id sau add" + quiz.getQuizID());
+            List<QuizData> quizDataRandom = quizDataService.getRandomQuizData(quantityQuizData, s);
+            for (QuizData e : quizDataRandom) {
+                QuizDetail quizDetail = new QuizDetail();
+                quizDetail.setQuizData(e);
+                quizDetail.setQuizzes(quiz);
+                quizDetailService.addNewQuizDetail(quizDetail);
+            }
+
             return ResponseEntity.ok(quiz);
         }catch (Exception e){
             System.out.println(e.getMessage());
