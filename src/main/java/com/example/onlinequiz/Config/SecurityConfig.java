@@ -55,7 +55,7 @@ public class SecurityConfig {
     // Danh sách các URL cho customer
     private static final String[] CUSTOMER_URL = {
             "/user/subject/addToWishList",
-            "/user/subject//wishlist",
+            "/user/subject/wishlist",
             "/user/subject/subjects-wishlist",
             "/user/subject/deletesubjectwishlist",
             "/user/subject/get",
