@@ -20,12 +20,12 @@ public class WishList {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "subjectID")
+    @JoinColumn(name = "subject_id")
     @JsonIgnore
     private Subjects subject;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userID")
+    @JoinColumn(name = "user_id")
     @JsonIgnore
     private Users user;
 }
