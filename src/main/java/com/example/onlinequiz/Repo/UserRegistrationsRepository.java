@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface UserRegistrationsRepository extends JpaRepository<UserPayment, Long> {
-        List<UserPayment> findByUsersAndStatus(Users u, boolean data);
+        List<UserPayment> findByUsersAndStatus(Users u, boolean status);
 
         UserPayment findByBillID(int BillID);
 

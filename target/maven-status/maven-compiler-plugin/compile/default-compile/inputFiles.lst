@@ -31,6 +31,7 @@ C:\Users\quang\Downloads\QuizPractice-BE\src\main\java\com\example\onlinequiz\Pa
 C:\Users\quang\Downloads\QuizPractice-BE\src\main\java\com\example\onlinequiz\Model\LessonType.java
 C:\Users\quang\Downloads\QuizPractice-BE\src\main\java\com\example\onlinequiz\Repo\QuizQuestionRepository.java
 C:\Users\quang\Downloads\QuizPractice-BE\src\main\java\com\example\onlinequiz\Payload\Request\PasswordChangeRequest.java
+C:\Users\quang\Downloads\QuizPractice-BE\src\main\java\com\example\onlinequiz\Repo\SubjectTeacherRepository.java
 C:\Users\quang\Downloads\QuizPractice-BE\src\main\java\com\example\onlinequiz\Services\Impl\CategoryServiceImpl.java
 C:\Users\quang\Downloads\QuizPractice-BE\src\main\java\com\example\onlinequiz\Model\PostCategories.java
 C:\Users\quang\Downloads\QuizPractice-BE\src\main\java\com\example\onlinequiz\Controller\FourRoleController\UserRegistrationController.java

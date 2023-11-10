@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-@CrossOrigin( origins = "https://quangnv1911-fe.onrender.com")
+@CrossOrigin( origins = "https://quangnv1911-fe.onrender.com")// Cho phép CORS từ mọi nguồn
 @RestController // Đánh dấu đây là một Controller
 @RequestMapping("/register") // Định nghĩa đường dẫn cơ sở cho Controller
 @RequiredArgsConstructor // Tự động tạo constructor với tham số cho các trường được đánh dấu là final

@@ -155,6 +155,7 @@ com\example\onlinequiz\Repo\UserRepository.class
 com\example\onlinequiz\Model\SubjectCategories.class
 com\example\onlinequiz\Services\SubjectTopicService.class
 com\example\onlinequiz\Model\QuizQuestions.class
+com\example\onlinequiz\Repo\SubjectTeacherRepository.class
 com\example\onlinequiz\Services\Impl\QuizTypeServiceImpl.class
 com\example\onlinequiz\Model\ExamLevel.class
 com\example\onlinequiz\Services\FileUpload.class

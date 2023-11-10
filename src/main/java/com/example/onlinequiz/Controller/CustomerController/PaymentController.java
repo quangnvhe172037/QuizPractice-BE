@@ -171,7 +171,6 @@ public class PaymentController {
     @GetMapping("/get/price/{subjectId}")
     public ResponseEntity<CourseCheckoutResponse> getPriceSubject(
             @PathVariable Long subjectId
-
     ) {
         try {
             CourseCheckoutResponse response = userPaymentService.getCourseCheckout(subjectId);
@@ -190,14 +189,10 @@ public class PaymentController {
             @PathVariable Long subjectId,
             @RequestParam Long userId,
             @RequestParam Long preId
-
-
     ) {
         try {
             UserPayment u = userPaymentService.addNewPayment(userId, subjectId, preId);
             PaymentResponse paymentResponse = userPaymentService.createNewVnPayPayment(u.getSubjectPrice().getPrice(), u.getBillID());
-
-
             if (paymentResponse != null) {
                 return ResponseEntity.status(HttpStatus.OK).body(paymentResponse);
             } else {
@@ -216,6 +211,7 @@ vnp_BankCode=NCB&
 vnp_BankTranNo=VNP14136862&
 vnp_CardType=ATM&
 vnp_OrderInfo=Thanh+toan+don+hang%3A79865267&
+Thanh toan
 vnp_PayDate=20231009165726&
 vnp_ResponseCode=00&
 vnp_TmnCode=QJZS3R8U&vnp_TransactionNo=14136862&

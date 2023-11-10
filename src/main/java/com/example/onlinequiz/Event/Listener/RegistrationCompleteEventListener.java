@@ -36,7 +36,7 @@ public class RegistrationCompleteEventListener implements ApplicationListener<Re
 
         userService.saveUserVerificationToken(theUser, verificationToken); // Lưu mã xác thực vào cơ sở dữ liệu
 
-        String url = "https://quangnv1911-fe.onrender.com" + "/register/verifyEmail?token=" + verificationToken; // Tạo URL xác thực
+        String url = event.getApplicationUrl() + "/register/verifyEmail?token=" + verificationToken; // Tạo URL xác thực
 
         try {
             sendVerificationEmail(url); // Gửi email xác thực
