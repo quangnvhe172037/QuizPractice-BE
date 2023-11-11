@@ -56,6 +56,32 @@ public class SubjectServiceImp implements SubjectService {
     }
 
     @Override
+    public SubjectDetailResponse getSubjectDetailPublic(Long subjectId) {
+        Subjects getSubject = subjectRepository.getSubjectsBySubjectID(subjectId);
+        if (getSubject == null) {
+            return null;
+        }
+        SubjectPrice getSubjectPrice = subjectPriceRepository.findBySubjectAndAndStatus(getSubject, true);
+        if (getSubjectPrice == null) {
+            return null;
+        }
+        SubjectDetailResponse dataResponse;
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        String strDate = formatter.format(date);
+        dataResponse = new SubjectDetailResponse(
+                getSubject.getSubjectID(),
+                getSubject.getSubjectName(),
+                getSubject.getDescription(),
+                getSubject.getImage(),
+                formatter.format(getSubject.getCreateDate()),
+                getSubjectPrice != null ? getSubjectPrice.getPreID() : 0,
+                getSubjectPrice != null ? getSubjectPrice.getPrice() : 0
+        );
+        return dataResponse;
+    }
+
+    @Override
     public SubjectDetailResponse getSubjectDetail(Long userId, Long subjectId) {
 
         Users getUser = userRepository.getById(userId);
