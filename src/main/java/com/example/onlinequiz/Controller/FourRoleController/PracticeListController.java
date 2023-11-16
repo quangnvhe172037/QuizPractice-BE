@@ -110,13 +110,13 @@ public class PracticeListController {
             int quantityQuizData;
             switch (examLevel){
                 case "easy":
-                    quantityQuizData = 4;
+                    quantityQuizData = 40;
                     break;
                 case "medium":
-                    quantityQuizData = 5;
+                    quantityQuizData = 50;
                     break;
                 default:
-                    quantityQuizData = 6;
+                    quantityQuizData = 60;
             }
 
             Quizzes quiz = new Quizzes();
